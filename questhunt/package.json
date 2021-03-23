@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publishToHeroku": "cd ../ && git subtree push --prefix frontend heroku-questhunt-frontend main || true"
+    "publishToHeroku": "cd ../ && git subtree push --prefix questhunt heroku-questhunt-frontend main || true"
   },
   "eslintConfig": {
     "extends": [
