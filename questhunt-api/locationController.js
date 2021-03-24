@@ -19,7 +19,7 @@ connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
 })
 
-locationRoutes.route('/').get(cors(), function(req, res) {
+locationRoutes.route('/').get(function(req, res) {
     Location.find(function(err, locations) {
         if (err) {
             console.log(err);
