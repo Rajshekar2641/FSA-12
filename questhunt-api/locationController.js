@@ -78,6 +78,6 @@ locationRoutes.route('/delete/:id').delete(function(req, res) {
 
 app.use('/locations', locationRoutes);
 
-app.listen(process.env.PORT, function() {
+app.listen(process.env.PORT||4000, function() {
     console.log("Server is running on Port: " + process.env.PORT);
 });
