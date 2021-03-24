@@ -2,10 +2,10 @@
   "name": "questhunt-api",
   "version": "1.0.0",
   "description": "Full stack application",
-  "main": "app.js",
+  "main": "locationController.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+    "start": "nodemon locationController.js",
     "publishToHeroku": "cd ../ && git subtree push --prefix questhunt-api heroku-questhunt-backend main || true"
   },
   "author": "",
