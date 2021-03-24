@@ -78,6 +78,11 @@ locationRoutes.route('/delete/:id').delete(function(req, res) {
 
 app.use('/locations', locationRoutes);
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
+
 app.listen(process.env.PORT, function() {
     console.log("Server is running on Port: " + process.env.PORT);
 });
