@@ -4,14 +4,15 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const locationRoutes = express.Router();
-const PORT = 4000;
 
+const dotenv = require('dotenv');
+dotenv.config();
 var Location = require('./models/location');
 app.use(cors());
 app.use(bodyParser.json());
 
 // mongoose.connect('mongodb://127.0.0.1:27017/locations', { useNewUrlParser: true });
-mongoose.connect('mongodb+srv://s538099:Raj@2641@cluster0.ghisa.azure.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',  { useNewUrlParser: true })
+mongoose.connect(process.env.MONGO_URI,  { useNewUrlParser: true })
 const connection = mongoose.connection;
 
 connection.once('open', function() {
@@ -77,6 +78,6 @@ locationRoutes.route('/delete/:id').delete(function(req, res) {
 
 app.use('/locations', locationRoutes);
 
-app.listen(PORT, function() {
-    console.log("Server is running on Port: " + PORT);
+app.listen(process.env.PORT, function() {
+    console.log("Server is running on Port: " + process.env.PORT);
 });
