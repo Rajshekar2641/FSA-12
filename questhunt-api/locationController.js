@@ -19,7 +19,7 @@ connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
 })
 
-locationRoutes.route('/').get(function(req, res) {
+locationRoutes.route('/').get(cors(), function(req, res) {
     Location.find(function(err, locations) {
         if (err) {
             console.log(err);
@@ -77,11 +77,6 @@ locationRoutes.route('/delete/:id').delete(function(req, res) {
 });
 
 app.use('/locations', locationRoutes);
-
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-  });
 
 app.listen(process.env.PORT, function() {
     console.log("Server is running on Port: " + process.env.PORT);
