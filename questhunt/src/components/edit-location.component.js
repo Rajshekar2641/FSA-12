@@ -96,7 +96,7 @@ export default class EditLocation extends Component {
                     <div className="form-group">
                         <label>Latitude: </label>
                         <input 
-                                type="number"  step="any"
+                                type="number"  step=".01"
                                 className="form-control"
                                 value={this.state.latitude}
                                 onChange={this.onChangeLocationLatitude}
@@ -106,7 +106,7 @@ export default class EditLocation extends Component {
                     <div className="form-group">
                         <label>Longitude: </label>
                         <input 
-                                type="number" step="any"
+                                type="number" step=".01"
                                 className="form-control"
                                 value={this.state.longitude}
                                 onChange={this.onChangeLocationLongitude}
