@@ -113,9 +113,9 @@ export default class CreateLocation extends Component {
                                 />
                     </div>
                     <div className="form-group">
-                        <label>Radius: </label>
+                        <label>Radius(in meters): </label>
                         <input 
-                                type="number" 
+                                type="text" 
                                 className="form-control"
                                 value={this.state.radius}
                                 onChange={this.onChangeLocationRadius}
