@@ -189,7 +189,7 @@ export default class MainComponent extends Component {
                       <div class="d-flex justify-content-center mb-3">
                           <div className = "myTable" id = "myTable">
                               <div className = "myTable-row" id = "myTable-row">
-                                  <div id="colorSelector1"></div> 
+                                  <div id="colorSelector1">Click here to start the Hunt!!</div> 
                                   <div id="colorSelector2"></div>
                                 </div>
                             </div>
